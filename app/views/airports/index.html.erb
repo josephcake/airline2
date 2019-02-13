@@ -1,0 +1,15 @@
+<h1>All Airports' name</h1>
+
+<table border="1">
+  <tr>
+    <th>Airport</th>
+    <th>City</th>
+  </tr>
+  <% @airports.each do |row| %>
+  <% row.id %>
+  <tr>
+    <td><%= row.airport_name%></td>
+    <td><%= row.city %></td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,11 @@
+<%= form_for @airport do |f| %>
+  <%= f.label :departure_city %>
+  <%= f.collection_select :city, Airport.all, :id, :city %>
+  <br>
+  <%= f.label :arrival_city %>
+  <%= f.collection_select :city, Airport.all, :id, :city %>
+  <br>
+  <%= f.label :departure_date %>
+  <%# <%= f.text_field :departure_date %> %>
+  <%= submit_tag "Find my flights!" %>
+<% end %>

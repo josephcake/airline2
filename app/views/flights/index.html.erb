@@ -1,0 +1,16 @@
+<h1>All Flights' name</h1>
+<table>
+  <tr>
+    <th>Departure City</th>
+    <th>Arrival City</th>
+    <th>Departure Date</th>
+  </tr>
+
+    <% @flights.each do |f| %>
+  <tr>
+      <td><%= f.departure_city %></td>
+      <td><%= f.arrival_city %></td>
+      <td><%= f.departure_date %></td>
+  </tr>
+  <% end %>
+</table>

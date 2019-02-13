@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: 
+  state: 
+  state_code: 
+  airport_code: 
+  airport_name: MyString
+
+two:
+  city: 
+  state: 
+  state_code: 
+  airport_code: 
+  airport_name: MyString

@@ -1,0 +1,16 @@
+<h2>Ticket page</h2>
+<h2><%= @@user.first_name %> <%= @@user.last_name %></h2>
+<h2><%= @flight.departure_city %></h2>
+<h2><%= @flight.arrival_city %></h2>
+<h2><%= @flight.departure_date %></h2>
+<h2><%= @flight.id %></h2>
+<h2><%= @flight.departure_time %>:00</h2>
+<h2><%= @flight.arrival_time %>:00</h2>
+
+
+<%= form_for @ticket do |f| %>
+  <%= f.text_field :seat_number %>
+  <%= f.hidden_field :customer_id, :value => @@user.id %>
+  <%= f.hidden_field :flight_id, :value => @flight_id %>
+  <%= f.submit %>
+<% end %>

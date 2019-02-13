@@ -1,0 +1,3 @@
+class AirportFlightsController < ApplicationController
+
+end

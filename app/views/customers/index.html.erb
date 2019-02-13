@@ -1,0 +1,17 @@
+<h1>List of all customers</h1>
+<h3>...change to login screen later</h3>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Passport</th>
+  </tr>
+
+  <% @customers.each do |cus| %>
+  <tr>
+    <td><%= cus.first_name %></td>
+    <td><%= cus.last_name %></td>
+    <td><%= cus.passport %></td>
+  </tr>
+  <% end %>
+</table>
