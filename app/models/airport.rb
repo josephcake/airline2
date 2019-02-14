@@ -10,4 +10,10 @@ class Airport < ApplicationRecord
     end
   end
 
+  def self.sortname
+    return self.all.sort_by do |airport|
+      airport.city
+    end
+  end
+
 end

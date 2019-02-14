@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
 
 body {
   margin: 15px
+}
+
+.nav {
+  border: black solid 1px;
 }
