@@ -5,6 +5,17 @@
     <title></title>
   </head>
   <body>
+    <header>
+      <div class="nav">
+        <ul>
+          <li class="home"><a href="#">Home</a></li>
+          <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
+          <li class="about"><a href="#">About</a></li>
+          <li class="news"><a href="#">Newsletter</a></li>
+          <li class="contact"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
     <%= form_tag "/logout", method: :delete do %>
       <%= submit_tag "Logout" %>
     <% end %>
@@ -13,6 +24,11 @@
     <h2><%= @customer.email %></h2>
     <h3><%= @customer.passport %></h3>
 
+    <% @customer.flights.each do |flight| %>
+    <li><%= flight.departure_city %></li>
+    <%= link_to "Cancel", "/flights/#{flight.id}", method: :delete%>
+    <% end %>
+
     <form action="/flights/new">
       <input type="submit" value="Find new flights!" />
     </form>
@@ -20,6 +36,7 @@
     <%= form_tag "/flights/#{@customer.id}" do %>
       <%= submit_tag "Find my flights!" %>
     <% end %>
+
 
 
   </body>

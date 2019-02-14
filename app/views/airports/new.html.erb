@@ -1,6 +1,18 @@
+<header>
+  <div class="nav">
+    <ul>
+      <li class="home"><a href="#">Home</a></li>
+      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
+      <li class="about"><a href="#">About</a></li>
+      <li class="news"><a href="#">Newsletter</a></li>
+      <li class="contact"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
 <%= form_for @airport do |f| %>
   <%= f.label :departure_city %>
-  <%= f.collection_select :city, Airport.all, :id, :city %>
+  <%= f.collection_select :city, Airport.all.uniq, :id, :city %>
   <br>
   <%= f.label :arrival_city %>
   <%= f.collection_select :city, Airport.all, :id, :city %>
@@ -9,3 +21,4 @@
   <%# <%= f.text_field :departure_date %> %>
   <%= submit_tag "Find my flights!" %>
 <% end %>
+ <h1>dont need this page</h1>

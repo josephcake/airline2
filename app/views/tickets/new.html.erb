@@ -1,11 +1,24 @@
+<header>
+  <div class="nav">
+    <ul>
+      <li class="home"><a href="#">Home</a></li>
+      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
+      <li class="about"><a href="#">About</a></li>
+      <li class="news"><a href="#">Newsletter</a></li>
+      <li class="contact"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
 <h2>Ticket page</h2>
-<h2><%= @@user.first_name %> <%= @@user.last_name %></h2>
-<h2><%= @flight.departure_city %></h2>
-<h2><%= @flight.arrival_city %></h2>
-<h2><%= @flight.departure_date %></h2>
-<h2><%= @flight.id %></h2>
-<h2><%= @flight.departure_time %>:00</h2>
-<h2><%= @flight.arrival_time %>:00</h2>
+
+  <h2><%= @@user.first_name %> <%= @@user.last_name %></h2>
+  <h2><%= @flight.departure_city %></h2>
+  <h2><%= @flight.arrival_city %></h2>
+  <h2><%= @flight.departure_date %></h2>
+  <h2><%= @flight.id %></h2>
+  <h2><%= @flight.departure_time %>:00</h2>
+  <h2><%= @flight.arrival_time %>:00</h2>
 
 
 <%= form_for @ticket do |f| %>

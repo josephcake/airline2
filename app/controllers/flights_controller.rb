@@ -5,7 +5,7 @@ class FlightsController < ApplicationController
 
   def index
     # byebug
-    @flights = Flight.all
+    @flights = Flight.all.sort
   end
 
   def new
@@ -15,8 +15,8 @@ class FlightsController < ApplicationController
   end
 
   def create
+     # byebug
     @flight = Flight.create(flight_params)
-    # @flight = Flight.create(flight_params)
     # byebug
     redirect_to "/flights/#{@flight.id}"
   end
@@ -29,6 +29,12 @@ class FlightsController < ApplicationController
     # byebug
     @flight = Flight.find(params[:id])
     render :selected_page
+  end
+
+  def destroy
+    @flight = Flight.find(params[:id])
+    @flight.destroy
+    redirect_to "/customers/#{session[:customer_id]}"
   end
 
 

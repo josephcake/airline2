@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :flights
   resources :customers
   resources :tickets
+
   post "/flights/selected_page/:id" => "flights#selected"
-  post "/customers/ticket/new" => "tickets#new"
+  get "/customers/ticket/new" => "tickets#new"
+  post "/customers/ticket/:id" => "tickets#create_flight"
+
 
   # resources :sessions
   # resources :search

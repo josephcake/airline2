@@ -1,13 +1,25 @@
+
 <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
-<h1>Nav bar----</h1>
+
+<header>
+  <div class="nav">
+    <ul>
+      <li class="home"><a href="#">Home</a></li>
+      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
+      <li class="about"><a href="#">About</a></li>
+      <li class="news"><a href="#">Newsletter</a></li>
+      <li class="contact"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
 <h2 class="name_header"><%= @current_user.first_name %> <%= @current_user.last_name %></h2>
 <div class="all_choices">
-  <% @flight.departure_time = rand(0..12) %>
-  <% @flight.arrival_time = rand(0..12) %>
 
-  <% for i in 0..7 do %>
+  <%# <% @flight.arrival_time = rand(0..12) %> %>
+
+
     <form action="/flights/selected_page/<%= @flight.id %>" method="post">
     <div class= "time_choice">
       <table>
@@ -34,7 +46,7 @@
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </form>
     <br>
-  <% end %>
+
 
 </div>
 

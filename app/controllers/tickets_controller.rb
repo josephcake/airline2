@@ -6,13 +6,25 @@ class TicketsController < ApplicationController
   end
 
   def new
-    @flight = Flight.find_by(paras[:id])
+    # byebug
+    customer = Customer.find(@@user.id)
+    @flight = customer.flights.last
     @ticket = Ticket.new
   end
 
   def create
-    @ticket = Ticket.create(ticket_params)
+    # byebug
+     @ticket = Ticket.create(ticket_params)
+    redirect_to ticket_path(@ticket)
   end
+
+  def create_flight
+    @customer=Customer.find(session[:customer_id])
+    @flight=Flight.find(params[:id])
+    @customer.flights << @flight
+    redirect_to "/customers/#{@customer.id}"
+  end
+
 
   def show
     @ticket = Ticket.find(params[:id])

@@ -18,10 +18,11 @@ class CustomersController < ApplicationController
   end
   def update
     @customer = Customer.find(session[:customer_id])
+    @customer.update(customer_params)
     redirect_to "/customers/#{@customer.id}"
   end
   def destroy
-    #code
+
   end
 
 
