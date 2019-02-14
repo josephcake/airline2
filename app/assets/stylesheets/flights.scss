@@ -46,26 +46,7 @@ div.all_choices {
 }
 
 .selected_page {
-  border: 1px solid lightgray;
-  border-radius: 3px;
-  width:70%;
-  margin-left:15%;
-  margin-right:15%;
+  margin-left: 80px;
+  margin-right: 80px;
   font-family: 'Quicksand', sans-serif;
-  padding-top: 20px;
-}
-
-.selected_page th {
-  color: lightblue;
-  font-size: 30px;
-  width: auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 20px;
-}
-
-.selected_page tr {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 20px;
 }

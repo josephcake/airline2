@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   get "/login" => "sessions#check"
   post "/user" => "sessions#login"
   get "/home" => "sessions#index"
-  delete "/logout" => "sessions#destroy"
+  get "/logout" => "sessions#destroy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  before_action :authorized
+  skip_before_action :authorized, only: [:new, :create]
 
   def index
     @customers = Customer.all

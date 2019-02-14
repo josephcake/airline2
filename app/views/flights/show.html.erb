@@ -3,22 +3,24 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
 
-<header>
-  <div class="nav">
-    <ul>
-      <li class="home"><a href="#">Home</a></li>
-      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
-      <li class="about"><a href="#">About</a></li>
-      <li class="news"><a href="#">Newsletter</a></li>
-      <li class="contact"><a href="#">Contact</a></li>
-    </ul>
+
+  <div class="navbar">
+    <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
   </div>
-</header>
 <h2 class="name_header"><%= @current_user.first_name %> <%= @current_user.last_name %></h2>
 <div class="all_choices">
-
-  <%# <% @flight.arrival_time = rand(0..12) %> %>
-
 
     <form action="/flights/selected_page/<%= @flight.id %>" method="post">
     <div class= "time_choice">
@@ -46,13 +48,4 @@
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </form>
     <br>
-
-
 </div>
-
-<%# <%= form_for @flight do |f| %>
-  <%# <%= f.show :departure_city %>  %>
-  <%# <%= f.show :arrival_city %> %>
-  <%# <%= f.show :departure_time %> %>
-
-<%# <% end %> %> %>

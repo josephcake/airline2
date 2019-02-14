@@ -1,5 +1,6 @@
 require 'csv'
 class ApplicationController < ActionController::Base
+  
 
   def current_user
     if session[:customer_id]

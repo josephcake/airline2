@@ -1,4 +1,7 @@
 <style>
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+</style>
+<style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
 <!DOCTYPE html>
@@ -7,17 +10,40 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
 
-    <span><h1>HOME</h1></span>
-    <hr>
+  <body class="entire_home_page">
+    <div class="navbar">
+      <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+      <a href="/home">Home</a>
+      <a href="#news">News</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
 
-    <form action="/login">
-      <input type="submit" value="Login" />
-    </form>
-    <form action="/customers/new">
-      <input type="submit" value="Register" />
-    </form>
+    <div class="home_text">
+      <span>anywhere airlines . . . </span>
+
+    </div>
+
+
+
+    <div class="home-page">
+      <form class = "login_box" action="/login">
+        <input class="button" id="login_btn" type="submit" value="Login" />
+      </form>
+      <form class="register_box" action="/customers/new">
+        <input class="button" id="register_btn" type="submit" value="Register" />
+      </form>
+    </div>
+
 
   </body>
 </html>

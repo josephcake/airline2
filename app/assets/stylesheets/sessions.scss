@@ -1,8 +1,136 @@
-h1 {
-  color: coral;
-  background-color: navy;
 
-}
 // body {
 //   // background-color: grey;
 // }
+
+
+
+.entire_home_page {
+  background-image:url("https://picserio.com/data/out/321/macbook-12-wallpaper_5300618.jpg");
+  background-size: 100%;
+}
+
+
+.home-page {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+  width: 39%;
+  height: 70px;
+  // border: solid 1px lightgray;
+  // border-radius: 8px;
+  // background-color: rgb(184, 185, 186);
+}
+
+.login_box {
+  height: 60%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.register_box {
+  height: 60%;
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.button {
+  margin-top: 20px;
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 90%;
+}
+
+#login_btn {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+#register_btn {
+  background: rgb(66, 184, 221);
+  cursor:pointer;
+}
+#login_btn:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+#register_btn:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+.home_text {
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  font-size: 70px;
+  color: black;
+}
+
+.home_text:hover {
+  color: lightgray;
+}
+
+// # -------------------------------------inside the login page
+
+.login_page {
+  margin-left: 100px;
+
+  margin-top: 100px;
+  display: flex;
+  width: 33%;
+  height: 230px;
+  border: 1px lightgray solid;
+  font-size: 40px;
+
+}
+
+.login_page div {
+  height: 20%;
+  margin-top: 20px;
+  margin-left: 83px;
+  margin-bottom: 20px;
+
+}
+
+.placeholder {
+  width: 190px;
+  height: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  color: rgb(66, 184, 221)
+}
+
+body.log_log_in_page {
+  background-image: url("https://i.pinimg.com/originals/55/0b/7a/550b7afbf123fa534ac657745e1d512c.png");
+  background-position: 48% 3%;
+  background-size: cover;
+
+}

@@ -1,36 +1,51 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
-<header>
-  <div class="nav">
-    <ul>
-      <li class="home"><a href="#">Home</a></li>
-      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
-      <li class="about"><a href="#">About</a></li>
-      <li class="news"><a href="#">Newsletter</a></li>
-      <li class="contact"><a href="#">Contact</a></li>
-    </ul>
+
+  <div class="navbar">
+    <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
   </div>
-</header>
+
+
+
 <% @@user = Customer.find(session[:customer_id]) %>
+<h2 class="name_header"><%= @current_user.first_name %> <%= @current_user.last_name %></h2>
+
 <form class="selected_page" action="/customers/ticket/<%= @flight.id %>" method="post">
-  <table>
-    <tr>
-      <td><%= @@user.first_name %></td>
-      <td><%= @@user.last_name %></td>
-    </tr>
-    <tr>
-      <td><%= @flight.departure_city %></td>
-      <td><%= @flight.departure_time %>:00</td>
-    </tr>
-    <tr>
-      <td><%= @flight.arrival_city %></td>
-      <td><%= @flight.arrival_time %>:00</td>
-    </tr>
-    <tr>
-      <td><%= @flight.departure_date %></td>
-    </tr>
-  </table>
-  <button type="submit" class="select_button">Buy This Flight</button>
+
+  <div class= "time_choice">
+    <table>
+      <tr>
+        <td><h4>Departure City <%= @flight.departure_city %></h4></td>
+        <td class = "destination_spacing"><img src="https://image.flaticon.com/icons/png/512/61/61212.png" width="40" height="40"></td>
+        <td><h4>Departure time <%= @flight.departure_time %>:00</h4></td>
+        <td>
+          <button type="submit" class="select_button">Buy This Flight</button>
+        </td>
+      </tr>
+      <tr>
+        <td><h4>Arrival City <%= @flight.arrival_city %></h4></td>
+        <td class = "destination_spacing"></td>
+        <td><h4> Arrival time <%= @flight.arrival_time %>:00</h4></td>
+      </tr>
+      <tr>
+        <td><h4>Departure Date <%= @flight.departure_date %></h4></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>

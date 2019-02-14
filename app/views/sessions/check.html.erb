@@ -1,20 +1,48 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
-<% if flash[:error] %>
-  <li><%= flash[:error] %></li>
-<% end %>
 
-<h2> Login </h2>
-<%= form_tag "/user" do %>
-   <div>
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
-   </div>
-   <div>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-   </div>
+<body class="log_log_in_page">
 
-   <%= submit_tag "Login" %>
-<% end %>
+
+
+  <div class="navbar">
+    <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="login_page">
+    <%= form_tag "/user" do %>
+       <div class="email_check">
+        <% label_tag :email %>
+        <%= email_field_tag :email, nil, placeholder: 'email', class: "placeholder"%>
+       </div>
+       <div class="password_check">
+        <% label_tag :password %>
+        <%= password_field_tag :password, nil, placeholder: 'password', class: "placeholder" %>
+       </div>
+       <div>
+          <%= submit_tag "Login", class: "placeholder" %>
+       </div>
+
+    <% end %>
+  </div>
+
+  <% if flash[:error] %>
+    <li><%= flash[:error] %></li>
+  <% end %>
+
+</body>
