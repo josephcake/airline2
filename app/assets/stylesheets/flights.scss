@@ -6,32 +6,43 @@
   border: 1px solid lightgray;
   border-radius: 3px;
   padding: 13px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'VT323', monospace;
+}
+
+.flight_show_body {
+  background-image: url("https://blazepress.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_500/MTMyNTkzNjEzNzY1ODgwNDUx/subtle-motion-gif-3gif.webp");
+  background-position: 0 18px;
+  background-size: 65%;
 }
 
 div.time_choice {
-  border: 1px solid lightgray;
-  border-radius: 3px;
+  border: 1px solid rgb(156, 101, 160);
+  border-radius: 8px;
   padding-left: 35px;
   padding: 15px;
   height: 180px;
   // background-color: lightgray;
-  // box-shadow: 8px 8px 9px gray;
+  box-shadow: 5px 5px rgb(170, 88, 154);
 }
 div.time_choice:hover {
-  box-shadow:
-            1px 1px #5e83a0,
-            2px 2px #5e83a0,
-            3px 3px #5e83a0;
-    -webkit-transform: translateX(-2px);
-    transform: translateX(-2px);
+  // box-shadow:
+  //           1px 1px #5e83a0,
+  //           2px 2px #5e83a0,
+  //           3px 3px #5e83a0;
+    // -webkit-transform: translateX(-2px);
+    // transform: translateX(-2px);
+
+  border-color: rgb(90, 11, 91);
 }
 
 
 div.all_choices {
+  margin-top: 50px;
   margin-left: 80px;
   margin-right: 80px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+
 }
 
 .destination_spacing {
@@ -42,11 +53,124 @@ div.all_choices {
 .select_button {
   display: block;
   position: relative;
-  left: 280px;
+  height: 40px;
+  width: 200px;
+  left: 230px;
+  background-color: transparent;
+  border: solid 1px rgb(90, 11, 91);
+  border-radius: 8px;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+}
+
+.select_button:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
 .selected_page {
+  margin-top: 50px;
   margin-left: 80px;
   margin-right: 80px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'VT323', monospace;
+}
+
+.selected_page_time_choice {
+  border: 1px solid rgb(46, 93, 107);
+  border-radius: 8px;
+  padding-left: 35px;
+  padding: 15px;
+  height: 180px;
+  // background-color: lightgray;
+  box-shadow: 5px 5px rgb(46, 93, 107);
+}
+
+.selected_page_time_choice:hover {
+  // box-shadow:
+  //           1px 1px #5e83a0,
+  //           2px 2px #5e83a0,
+  //           3px 3px #5e83a0;
+    // -webkit-transform: translateX(-2px);
+    // transform: translateX(-2px);
+
+  border-color: rgb(90, 11, 91);
+}
+
+.random_icons{
+  display: inline-flex;
+  position: absolute;
+  margin-left: 310px;
+  margin-top: -60px;
+}
+
+.selected_page_body{
+  background-image: url("https://blazepress.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_500/MTMyNTkzNjE0MDM0NDIxNzcw/subtle-motion-gif-13gif.webp");
+  background-size: 135%;
+  background-position: 55% 0;
+}
+
+// #-------------------------------------------pick_city
+
+
+.pick_city_page {
+  margin-left: auto;
+  margin-right: auto;
+  // border: 1px blue solid;
+  margin-top: 120px;
+  height: 320px;
+  width: 450px;
+}
+
+.pick_city_form {
+  display: flex;
+  height: 270px;
+  // border: red dotted 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 450px;
+  position: relative;
+  background-color: transparent;
+}
+
+
+.select_city {
+  margin-top: 12px;
+  margin-left: 70px;
+  // margin-right: auto;
+  background-color: transparent;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  height: 50px;
+  width: 320px;
+  text-align: center;
+  border: 1px dotted rgb(104, 80, 112);
+  box-shadow: 5px 10px rgb(104, 80, 112);
+  border-radius: 6px;
+}
+
+#find_my_flight_btn:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+.flight_new_body {
+  background-image: url("https://archive-media-1.nyafuu.org/wg/image/1515/43/1515436695167.gif");
+  background-size: 100%;
 }

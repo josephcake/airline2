@@ -21,6 +21,24 @@ class FlightsController < ApplicationController
     redirect_to "/flights/#{@flight.id}"
   end
 
+  # def new_random
+  #   @flight = Flight.new
+  #   render :new_random
+  # end
+
+  def create_random
+    rand_depart = Airport.all.map { |e| e.city }.sample
+    rand_arrive = Airport.all.map { |e| e.city }.sample
+    rand_date = (Time.now)
+    # rand_date = "01/15/1999"
+    # byebug
+    rand_d_time = rand(0..12)
+    rand-a_time = rand(13..23)*-1
+    @flight = Flight.create(:departure_city => rand_depart, :arrival_city => rand_arrive, :departure_date => rand_date, :departure_time => rand_d_time, :arrival_time => rand-a_time)
+    # byebug
+    redirect_to "/flights/#{@flight.id}"
+  end
+
   def show
     @flight = Flight.find(params[:id])
   end

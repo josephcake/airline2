@@ -1,0 +1,38 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
+<body class="customer_tickets_body">
+
+
+<div class="navbar">
+  <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+  <div class="dropdown">
+    <button class="dropbtn">Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/customers/<%= current_user.id %>">Home</a>
+      <a href="/customers/<%= current_user.id %>/edit" >My profile</a>
+      <a href="/customer_tickets/<%= current_user.id %>">My flights</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+</div>
+<div class="customer_tickets_first_div">
+  <div class="customer_tickets_inner_div">
+
+      <% @customer.flights.each do |flight| %>
+      <ul class = "customer_tickets_form">
+      <span>Departure City : <%= flight.departure_city %></span>
+      <span>Departure Time <%= flight.departure_time %>:00</span>
+      <span><img id="destination_spacing" src="https://image.flaticon.com/icons/png/512/61/61212.png"></span>
+      <span>Arrival City : <%= flight.arrival_city %></span>
+      <span>Arrival Time <%= flight.arrival_time %>:00</span>
+      <span>Departure Date : <%= flight.departure_date %></span>
+      <%= link_to "Cancel", "/flights/#{flight.id}", class: "cancel_flight_btn", method: :delete%>
+      </ul>
+      <% end %>
+
+  </div>
+</div>
+</body>

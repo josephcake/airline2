@@ -6,8 +6,10 @@
 
 
 .entire_home_page {
-  background-image:url("https://picserio.com/data/out/321/macbook-12-wallpaper_5300618.jpg");
-  background-size: 100%;
+  background-image:url("https://i.redd.it/90ekftm1ltgy.gif");
+  background-size: 113%;
+  font-family: 'VT323', monospace;
+
 }
 
 
@@ -46,6 +48,8 @@
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   width: 80%;
   height: 90%;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
 }
 
 #login_btn {
@@ -53,10 +57,12 @@
   background-repeat:no-repeat;
   cursor:pointer;
   overflow: hidden;
+  color: rgb(209, 85, 85);
+  border-color: rgb(209, 85, 85);
 }
 
 #register_btn {
-  background: rgb(66, 184, 221);
+  background: rgb(209, 85, 85);
   cursor:pointer;
 }
 #login_btn:hover {
@@ -84,7 +90,7 @@
 
 
 .home_text {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'VT323', monospace;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -94,20 +100,20 @@
 }
 
 .home_text:hover {
-  color: lightgray;
+  color: rgb(209, 85, 85);
 }
 
 // # -------------------------------------inside the login page
 
 .login_page {
-  margin-left: 100px;
-
+  margin-left: 740px;
   margin-top: 100px;
   display: flex;
   width: 33%;
   height: 230px;
-  border: 1px lightgray solid;
+  // border: 1px lightgray solid;
   font-size: 40px;
+
 
 }
 
@@ -117,6 +123,7 @@
   margin-left: 83px;
   margin-bottom: 20px;
 
+
 }
 
 .placeholder {
@@ -125,12 +132,12 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
-  color: rgb(66, 184, 221)
+  color: rgb(66, 52, 211);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
 }
 
 body.log_log_in_page {
-  background-image: url("https://i.pinimg.com/originals/55/0b/7a/550b7afbf123fa534ac657745e1d512c.png");
-  background-position: 48% 3%;
-  background-size: cover;
+  background-image: url("https://i.gifer.com/IjQ1.gif");
 
 }

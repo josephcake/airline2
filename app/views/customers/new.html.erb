@@ -1,29 +1,44 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
 <header>
-  <div class="nav">
-    <ul>
-      <li class="home"><a href="#">Home</a></li>
-      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
-      <li class="about"><a href="#">About</a></li>
-      <li class="news"><a href="#">Newsletter</a></li>
-      <li class="contact"><a href="#">Contact</a></li>
-    </ul>
+  <div class="navbar">
+    <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/home">Home</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
   </div>
 </header>
+<body class="register-body">
 
-<%= form_for @customer do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <%= f.label :passport %>
-  <%= f.text_field :passport %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
 
-  <%= f.submit %>
-<% end %>
+<div class="register_info_outter">
+  <div class="register_info">
+    <%= form_for @customer do |f| %>
+    <div class="register_info_inner">
+      <span>New customer</span>
+      <% f.label :first_name %>
+      <%= f.text_field :first_name, placeholder: 'first name', class: "placeholder" %>
+      <% f.label :last_name %>
+      <%= f.text_field :last_name, placeholder: 'last name', class: "placeholder" %>
+      <% f.label :passport %>
+      <%= f.text_field :passport, placeholder: '8 digit passport', class: "placeholder" %>
+      <% f.label :email %>
+      <%= f.email_field :email, placeholder: 'email', class: "placeholder" %>
+      <% f.label :password %>
+      <%= f.password_field :password, placeholder: 'password', class: "placeholder" %>
+      <%= f.submit required: :required, class: "submit_new_user" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+</body>

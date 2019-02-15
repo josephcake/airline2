@@ -1,26 +1,255 @@
-h1 span {
-  font-size: 50px;
-}
 
 .run_btn:hover {
 
 }
 
 .wing_it {
-  border: 1px solid black;
+  // border: 1px solid black;
+  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   height: 120px;
 }
 
-.wing_it_btn {
+.wing_it_btn_form {
   height: 40%;
   display: inline-flex;
-  border: 1px solid black;
+  // border: 1px solid black;
   position: relative;
   width: 80%;
+  margin-top: 30px;
+  margin-left: 55px;
+
+}
+
+.wing_it_btn {
+  height: 48px;
+  width: 180px;
+  margin-left: 33px;
+  border-radius: 3px;
+  border: 1px solid rgb(155, 90, 26);
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+}
+
+#customer_show_page {
+  background-image: url("https://i.gifer.com/33HO.gif");
+  max-width: 100%;
+  max-height: 100vh;
+  background-position: 15% 20%;
+}
 
 
+#new_flight_btn {
+  background-color: transparent;
+  color: rgb(155, 90, 26);
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+}
+#random_flight_btn {
+  background-color: rgb(155, 90, 26);
+}
 
+#new_flight_btn:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+#random_flight_btn:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.bought_flights ul {
+  font-size: 40px;
+  border: 2 solid white;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.customer_edit_page {
+  background-color: transparent;
+  height: 120px;
+  margin-top: 60px;
+}
+
+.customer_body_page {
+  background-image: url("https://blazepress.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_500/MTMyNTkzNjE0MDM0MzY2NDM0/subtle-motion-gif-6gif.webp");
+
+}
+
+.customer_info_field {
+  margin-top: 37px;
+  height: 40px;
+  margin-left: 7%;
+  width: 180px;
+  font-size: 20px;
+  border-radius: 4px;
+  color: rgb(48, 105, 122);
+  box-shadow: 5px 5px rgb(17, 52, 68);
+}
+
+.customer_edit_btn {
+  margin-left: 7%;
+  height: 40px;
+  font-size: 23px;
+  border-radius: 4px;
+  color: rgb(48, 105, 122);
+  box-shadow: 5px 5px rgb(17, 52, 68);
+}
+
+.customer_edit_btn:hover {
+  color: rgb(39, 162, 198);
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.customer_tickets_first_div {
+  margin-top: 40px;
+  width: 90%;
+  height: 500px;
+  // border: solid black 1px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.customer_tickets_inner_div {
+  // border: solid black 1px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+
+}
+
+.customer_tickets_form {
+  border: solid black 1px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 6px 6px gray;
+  background-color: rgb(110, 148, 163);
+}
+
+.customer_tickets_form:hover {
+  -webkit-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+
+.customer_tickets_form span {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  // margin-right: auto;
+  // border: solid black 1px;
+  display: inline-flex;
+}
+
+#destination_spacing {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  padding-bottom: 3px;
+  position: relative;
+
+}
+
+.cancel_flight_btn {
+  font-size: 20px;
+  margin-left: 550px;
+  // border: solid black 1px;
+  padding: 7px;
+  color: white;
+  background-color: rgb(63, 105, 122);
+  border-radius: 8px;
+}
+
+
+.customer_tickets_body {
+  background-color: rgb(63, 105, 122);
+}
+
+
+.register_info {
+  display: inline-block;
+  margin-left: 79px;
+  position: relative;
+  font-size: 40px;
+  background-color: white;
+}
+
+.register_info_outter {
+  margin-top: 70px;
+  border: 1px solid black;
+  // border-radius: 8px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  // opacity: 0.2;
+}
+
+.register_info_inner {
+  padding: 30px 0;
+  background-color: white;
+}
+.placeholder {
+  width: 190px;
+  height: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  color: rgb(66, 52, 211);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+}
+
+.submit_new_user {
+  color: rgb(66, 52, 211);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+}
+
+.submit_new_user:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.register-body {
+  background-image: url("https://data.whicdn.com/images/319247528/original.gif");
+  background-repeat: no-repeat;
+  background-size: 125%;
 }

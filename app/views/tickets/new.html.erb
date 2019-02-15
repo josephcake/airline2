@@ -1,22 +1,27 @@
 <style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
+<style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
 
-  <div class="navbar">
-    <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <div class="dropdown">
-      <button class="dropbtn">Dropdown
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+<div class="navbar">
+  <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+  <div class="dropdown">
+    <button class="dropbtn">Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/home">Home</a>
+      <a href="/customers/<%= @customer.id %>/edit" >My profile</a>
+      <a href="/customer_tickets/:id">My flights</a>
+      <a href="/logout">Logout</a>
     </div>
   </div>
+</div>
 
 <h2>Ticket page</h2>
 

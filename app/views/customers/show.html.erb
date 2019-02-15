@@ -1,56 +1,45 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body id="customer_show_page">
 
     <div class="navbar">
       <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
-      <a href="#home">Home</a>
-      <a href="/logout">Logout</a>
       <div class="dropdown">
-        <button class="dropbtn">Dropdown
+        <button class="dropbtn">Menu
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <a href="">Home</a>
+          <a href="/customers/<%= current_user.id %>/edit" >My profile</a>
+          <a href="/customer_tickets/<%= current_user.id %>">My flights</a>
+          <a href="/logout">Logout</a>
         </div>
       </div>
-      <a href="/customers/<%= @customer.id %>/edit" > <%= @customer.first_name %> <%= @customer.last_name %></a>
     </div>
 
     <%# form_tag "/logout", method: :delete do %>
       <%# submit_tag "Logout" %>
     <%# end %>
-<div class="wing_it">
-  <div class="wing_it_btn">
-    <form action="/flights/new">
-      <input type="submit" value="Find new flights!" />
-    </form>
-    <%= form_tag "/flights/#{@customer.id}" do %>
-      <%= submit_tag "Find my flights!" %>
-    <% end %>
+  <div class="wing_it">
+    <div class="wing_it_btn_form">
+      <form action="/flights/new" >
+        <input id="new_flight_btn" class="wing_it_btn" type="submit" value="Find new flights!" />
+      </form>
+      <%= form_tag "/flights/create_random", method: :post do %>
+        <%= submit_tag "Wing it!", class: "wing_it_btn", id: "random_flight_btn" %>
+      <% end %>
+    </div>
   </div>
-</div>
-
-<ul>
-  <% @customer.flights.each do |flight| %>
-  <li><%= flight.departure_city %></li>
-  <li><%= flight.arrival_city %></li>
-  <li><%= flight.departure_date %></li>
-  <%= link_to "Cancel", "/flights/#{flight.id}", method: :delete%>
-  <% end %>
-</ul>
-
-
-
 
   </body>
 </html>

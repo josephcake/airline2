@@ -1,35 +1,41 @@
 <style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
+<style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
+<% @@user = Customer.find(session[:customer_id]) %>
+
+<body class="selected_page_body">
+
+
 
   <div class="navbar">
     <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
     <div class="dropdown">
-      <button class="dropbtn">Dropdown
+      <button class="dropbtn">Menu
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="/customers/<%= current_user.id %>">Home</a>
+        <a href="/customers/<%= current_user.id %>/edit" >My profile</a>
+        <a href="/customer_tickets/<%= current_user.id %>">My flights</a>
+        <a href="/logout">Logout</a>
       </div>
     </div>
   </div>
 
 
 
-<% @@user = Customer.find(session[:customer_id]) %>
-<h2 class="name_header"><%= @current_user.first_name %> <%= @current_user.last_name %></h2>
+
 
 <form class="selected_page" action="/customers/ticket/<%= @flight.id %>" method="post">
 
-  <div class= "time_choice">
+  <div class= "selected_page_time_choice">
     <table>
       <tr>
         <td><h4>Departure City <%= @flight.departure_city %></h4></td>
-        <td class = "destination_spacing"><img src="https://image.flaticon.com/icons/png/512/61/61212.png" width="40" height="40"></td>
+        <td class = destination_spacing""><img src="https://image.flaticon.com/icons/png/512/61/61212.png" width="40" height="40"></td>
         <td><h4>Departure time <%= @flight.departure_time %>:00</h4></td>
         <td>
           <button type="submit" class="select_button">Buy This Flight</button>
@@ -44,8 +50,15 @@
         <td><h4>Departure Date <%= @flight.departure_date %></h4></td>
         <td></td>
       </tr>
+      <tr class = "random_icons">
+        <td><img src="https://image.flaticon.com/icons/svg/181/181553.svg" width="40" height="40"></td>
+        <td><img src="https://image.flaticon.com/icons/svg/181/181515.svg" width="40" height="40"></td>
+        <td><img src="https://image.flaticon.com/icons/svg/159/159599.svg" width="40" height="40"></td>
+        <td><img src="https://image.flaticon.com/icons/svg/25/25380.svg" width="40" height="40"></td>
+      </tr>
     </table>
   </div>
 
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
+</body>

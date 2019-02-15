@@ -1,15 +1,23 @@
-<style>
+<!-- <style>
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 </style>
+<style>
+@import url('https://fonts.googleapis.com/css?family=VT323');
+</style>
 <header>
-  <div class="nav">
-    <ul>
-      <li class="home"><a href="#">Home</a></li>
-      <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
-      <li class="about"><a href="#">About</a></li>
-      <li class="news"><a href="#">Newsletter</a></li>
-      <li class="contact"><a href="#">Contact</a></li>
-    </ul>
+  <div class="navbar">
+    <img class="logo_pic" src="https://image.flaticon.com/icons/svg/929/929900.svg" alt="">
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/home">Home</a>
+        <a href="/customers/<%= current_user.id %>/edit" >My profile</a>
+        <a href="/customer_tickets/<%= current_user.id %>">My flights</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -24,4 +32,4 @@
   <%# <%= f.text_field :departure_date %> %>
   <%= submit_tag "Find my flights!" %>
 <% end %>
- <h1>dont need this page</h1>
+ <h1>dont need this page</h1> -->
